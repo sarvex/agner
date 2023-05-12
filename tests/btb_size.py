@@ -34,13 +34,10 @@ def plot(xs, ys, result, name, index):
     import numpy as np
     import matplotlib.pyplot as plt
 
-    if index:
-        ax = plt.subplot(2, 2, index)
-    else:
-        ax = plt.subplot(1, 1, 1)
+    ax = plt.subplot(2, 2, index) if index else plt.subplot(1, 1, 1)
     ax.set_yscale('log', basey=2)
     plt.title(name)
-    
+
     plt.xlabel("Branch count")
     plt.ylabel("Branch alignment")
     ax.xaxis.set_ticks(xs)

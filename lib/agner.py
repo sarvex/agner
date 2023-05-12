@@ -13,8 +13,8 @@ def filter_match(tests, test, subtest):
     # Somewhat ropey 'wildcard' matching
     if not tests: return True
     for match in tests:
-        if match == '%s.%s' % (test, subtest): return True
-        if match == '%s.*' % (test,): return True
+        if match == f'{test}.{subtest}': return True
+        if match == f'{test}.*': return True
     return False
 
 

@@ -15,7 +15,7 @@ AGNER = Agner()
 
 
 for test in set(TEST_PYS):
-    test_module = imp.load_source(test, os.path.join(ROOT, 'tests', test + ".py"))
+    test_module = imp.load_source(test, os.path.join(ROOT, 'tests', f"{test}.py"))
     AGNER.add_tests(test, test_module)
 
 
